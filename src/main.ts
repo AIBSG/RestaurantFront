@@ -1,16 +1,18 @@
 import './style.css'
 import {addListTypes, getTypes } from './types.ts'
-import { renserCartList } from './cart.ts'
 import { getPositions, renderListPositions, clickСheckType} from './positions.ts'
+import { addInCart, renderCartList, reduceAmountInCart, increaseAmountInCart } from './cart.ts'
 
-let listTypes =await getTypes()
+
+let listTypes = await getTypes()
 let listPositions = await getPositions()
-let cartButton = document.querySelector(".cart-button") as HTMLElement
-let popup = document.querySelector("#popup")as HTMLElement
-let closeCartButton = document.querySelector("#close-popup")as HTMLElement
+let cartList = document.querySelector('.cart-list')!
 addListTypes(listTypes)
 renderListPositions("Все", listPositions)
 clickСheckType(listPositions)
-renserCartList(cartButton, closeCartButton, popup)
+renderCartList(cartList)
+addInCart(cartList)
+reduceAmountInCart(cartList)
+increaseAmountInCart(cartList)
 
 

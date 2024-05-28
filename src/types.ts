@@ -13,12 +13,12 @@ export function addListTypes(listTypes: Type[]){
     let typesHtmlList = document.querySelector(".menu-nav-list")!;
     typesHtmlList.innerHTML += `
     <li class="menu-nav-item">
-        <button class="menu-nav-button">Все</button>
+        <button class="menu-nav-button classic-button">Все</button>
     </li>`
     listTypes.forEach(type => {
         typesHtmlList.innerHTML += `
             <li class="menu-nav-item">
-                <button class="menu-nav-button">${type.name}</button>
+                <button class="menu-nav-button classic-button">${type.name}</button>
             </li>
         `
     })

@@ -28,7 +28,7 @@ export function renderListPositions(typeName: string, listTypes: Position[]){
                 <img class="item-image" src=${position.image} ></img>
                 <h3 class="name">${position.name}</h3>
                 <p class="price">${position.price} руб</p>
-                <button class="buy-button">Купить</button>
+                <button class="buy-button classic-button">Купить</button>
             </li>`
         }
     });
